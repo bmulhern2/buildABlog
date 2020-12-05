@@ -27,7 +27,7 @@ let router = require('./Routes/router')
 
 // Use Client Code
 app.use(express.static(path.join(__dirname, '../dist/buildABlog')))
-app.use('/', express.static(path.join(__dirname, '../dist/buildABlog/index.html')))
+app.use('/', express.static(path.join(__dirname, '../dist/buildABlog')))
 
 // Use Router
 app.use('/api', router)
