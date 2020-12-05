@@ -25,12 +25,12 @@ mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: t
 // Import Router
 let router = require('./Routes/router')
 
-// Use Router
-app.use('/api', router)
-
 // Use Client Code
 app.use(express.static(path.join(__dirname, '../dist/buildABlog')))
 app.use('/', express.static(path.join(__dirname, '../dist/buildABlog/index.html')))
+
+// Use Router
+app.use('/api', router)
 
 // Create Server
 let server = http.createServer(app)
