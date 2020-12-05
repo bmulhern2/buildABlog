@@ -2,7 +2,7 @@
   "name": "build-ablog",
   "version": "0.0.0",
   "scripts": {
-    "start": "npm i && cd server && npm i && nodemon "
+    "start": "npm i && ng build && cd server && npm i && nodemon "
   },
   "private": true,
   "engines": {
