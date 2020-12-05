@@ -1,0 +1,15 @@
+<ul *ngFor="let post of posts">
+    <li>{{ post.title }}</li>
+    <li>{{ post.description }}</li>
+    <li>{{ post.post }}</li>
+    <div><button (click)="put(post._id)">Edit</button><button (click)="delete(post._id)">Delete</button></div>
+</ul>
+<form [formGroup]="postForm" (ngSubmit)="addNewPost()">
+    <input type="text" formControlName="title" placeholder="Title">
+    <br>
+    <input type="text" formControlName="description" placeholder="Description">
+    <br>
+    <input type="text" formControlName="post" placeholder="Post">
+    <br>
+    <button type="submit">Add New Post</button>
+</form>

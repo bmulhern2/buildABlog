@@ -1,0 +1,9 @@
+<form [formGroup]="putForm" (ngSubmit)="put()">
+    <input type="text" formControlName="title" placeholder="Title">
+    <br>
+    <input type="text" formControlName="description" placeholder="Description">
+    <br>
+    <input type="text" formControlName="post" placeholder="Post">
+    <br>
+    <button type="submit">Edit Form</button>
+</form>
